@@ -1,0 +1,461 @@
+:root{
+  --black: black;
+  --gray0: rgb(34, 34, 34);
+  --gray1: rgb(65, 65, 65);
+  --font-white: white;
+  --gray2: gray;
+  --yellow: rgb(255, 210, 87);
+  --red: rgb(233, 78, 78);
+}
+
+html{
+  margin:0;
+  height:100%;
+}
+
+body{
+  margin:0;
+  height:100%;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body{
+  background-color: var(--gray0);
+}
+
+/* styling for header component -----------------------------------------------------*/
+.header{
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  display: block;
+  background-color: var(--black);
+  z-index: 9001;
+}
+
+.inner-header{
+  width: 90%;
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.logo-container{
+  height: 100%;
+  width: 50%;
+  display: table;
+  float: left;
+  object-fit: contain;
+  max-height: 80px;
+  background-image: url("./image0.jpeg");
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-color: black;
+  background-position: center;
+}
+
+.logo-container h1{
+  color: white;
+  height: 100%;
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 32px;
+  font-weight: 200;
+}
+
+.logo-container h1 span{
+  font-weight: 800;
+}
+
+.navigation{
+  float: right;
+  height: 100%;
+}
+
+.navigation a{
+  height: 100%;
+  display: table;
+  float: left;
+  padding: 0px 20px;
+}
+
+.navgiation a:last-child{
+  padding-right: 0;
+}
+
+.navigation a li {
+  display: table-cell;
+  vertical-align: middle;
+  height: 100%;
+  color: white;
+  font-size: 16px;
+}
+
+.navigation a:hover {
+  background-color: var(--gray0);
+  cursor: pointer;
+}
+
+/*styling for main page view  -------------------------------------------------------*/
+.app-container{
+  height:100%;
+  min-height: 100vh;
+}
+
+.main-page-display{
+  position: relative;
+  padding-top: 80px;
+  min-height: 100%;
+  padding-bottom: 300px;
+}
+
+/* styling for post form ---------------------------------------------------------*/
+.item-form{
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 400px;
+  margin: auto;
+  justify-content: space-evenly;
+  background-color: rgb(167, 163, 163);
+  border-radius: 10px ;
+  box-shadow: 6px 6px 2px 1px rgba(65, 65, 95, 0.2);
+  padding: 10px;
+  margin-top: 100px;
+}
+
+/* styling for Trade page ---------------------------------------------------------*/
+.trade-listings-container{
+  height: 100%;
+  width: 100%;
+  display:flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  justify-content: center;
+
+}
+
+.listing-card{
+  background-color: var(--gray1);
+  color: var(--font-white);
+  height: 250px;
+  width: 400px;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  border: solid gray;
+  border-radius: 6px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.listing-card:nth-child(odd){
+  box-shadow: 3px 3px 3px var(--yellow);
+}
+
+.listing-card:nth-child(even){
+  box-shadow: 3px 3px 3px var(--red);
+}
+
+.listing-content-left{
+  font-size: 0.875rem;
+  max-width: 250px;
+  max-width: 200px;
+  min-height: 250px;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-right: 1em;
+}
+.listing-content-left img{
+  max-height: 159px;
+}
+
+.listing-content-right{
+  padding: 3px;
+  border: solid gray;
+  display: block;
+  margin: 0.7em auto 0.7em;
+  margin-top: 21px;
+}
+
+.listing-card h3{
+  background-color: black;
+  border-radius: 2px;
+  padding: 3px;
+  height: 30px;
+}
+
+.asking-price{
+  padding: 5px;
+}
+
+.asking-price span{
+  font-weight: 800;
+}
+
+.asking-price::after{
+  content: "";
+  display: block;
+  height: 1px;
+  width: 2em;
+  background-color: var(--gray2);
+  margin: 0.5 auto 0.5em;
+}
+
+.trade-listing-message-link{
+  border: solid var(--gray2);
+  background-color: var(--gray1);
+  color: var(--red);
+}
+
+.trade-listing-message-link:hover{
+  cursor: pointer;
+}
+
+/* styling for buttons ---------------------------------------------------------*/
+input[type="submit"]{
+  padding: 5px;
+  box-shadow: 0 20px 20px -10px rgb(199, 199, 199);
+  transition: .2s linear;
+}
+
+input[type="submit"]:hover{
+  color: white;
+  background-color: rgb(35, 205, 26);
+  border: none;
+  font-weight: bold;
+}
+
+.form-switch-button{
+  padding: 5px;
+  box-shadow: 0 20px 20px -10px rgb(199, 199, 199);
+  transition: .2s linear;
+}
+
+.form-switch-button:hover{
+  color: white;
+  background-color: rgb(35, 205, 26);
+  border: none;
+  font-weight: bold;
+}
+
+/* signup page styling ---------------------------------------------------------*/
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  justify-content: space-evenly;
+  background-color: white;
+  padding: 20px;
+  border-radius: 6px;
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+
+.alert{
+  color: var(--red);
+  background-color: rgb(236, 236, 236);
+  border-radius: 3px;
+}
+
+/* styling for profile page ---------------------------------------------------------*/
+.profile-page-container{
+  padding-top: 80px;
+  display: flex;
+  padding-left: 20px;
+  position: relative;
+  height: 100%;
+  width: 70%;
+}
+
+.profile-info-container{
+  color:var(--font-white);
+  display: flex;
+  flex-direction: column;
+  background-color: var(--gray1);
+  height: 300px;
+  width: 300px;
+  border-radius: 5px;
+  justify-content: center;
+  align-content: flex-start ;
+  align-items: center;
+}
+
+.profile-info-container h1{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.profile-info-container a{
+  justify-content: space-between;
+}
+
+.profile-selection-Link{
+  background-color: var(--gray2);
+  color: var(--font-white);
+  border: 1px solid orange;
+  border-radius: 8px;
+  align-content: center;
+  display: flex;
+  padding: 20px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  width: 130px;
+  text-align: center;
+}
+
+.user-listings-container{
+  display:flex;
+  flex-wrap: wrap;
+}
+
+/* styling for footer ---------------------------------------------------------*/
+.footer{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  object-fit: contain;
+  max-height: 200px;
+  background-image: url("./image0.jpeg");
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-color: black;
+  background-position: center;
+}
+
+input{
+  border-radius: 10px;
+  padding: 5px;
+  padding-left: 10px;
+  margin-left: 10px;
+}
+
+button {
+  border-radius: 10px;
+  padding: 5px;
+}
+
+button:hover {
+  background: green;
+  transition: 500ms;
+}
+
+/* chat message page styling ---------------------------------------------------------*/
+.message-page-container{
+  padding-top: 50px;
+  display:flex;
+  justify-content: center;
+}
+
+.message-sender-container{
+  border: solid var(--yellow);
+  background-color: var(--gray1);
+  color:white
+}
+
+.message-sender-container h1{
+  padding: 10px;
+}
+
+.direct-message-container{
+  border: solid var(--red);
+  color:white;
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  height: 800px;
+  background-color: var(--gray0);
+}
+
+.chat-container{
+  width: 800px;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  background-color: var(--gray1);
+}
+
+.receiver-chat-container{
+  padding: 3px;
+  margin: 7px;
+  border-radius: 8px;
+  width: 240px;
+  align-self: flex-start;
+}
+
+.receiver-chat-container .receiver-author-p{
+  padding-left: 20px;
+}
+.receiver-chat-bubble{
+  padding: 3px;
+  margin: 7px;
+  border: solid var(--red);
+  border-radius: 8px;
+  width: 240px;
+  align-self: flex-start;
+}
+
+.sender-chat-container{
+  padding: 20px;
+  margin: 2px;
+  border-radius: 8px;
+  width: 240px;
+  justify-content: right;
+  align-self: flex-end;
+}
+
+.sender-chat-container .sender-author-p{
+  padding-right: 10px;
+  text-align: right;
+
+}
+
+.sender-chat-bubble{
+  padding: 3px;
+  margin: 2px;
+  border: solid gray;
+  border-radius: 8px;
+  width: 240px;
+  justify-content: right;
+  align-self: flex-end;
+}
+
+.chat-entry-container {
+  background-color: var(--black);
+  display: flex;
+  flex-direction: row;
+  justify-content:center ;
+  
+}
+
+.chat-input-form{
+  margin: 5px;
+  width: 80%;
+  display: flex;
+  justify-content:flex-end;
+}
+
+.message-input{
+  width: 400px;
+}
