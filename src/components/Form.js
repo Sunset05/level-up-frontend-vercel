@@ -18,7 +18,7 @@ export default function Form(props) {
     const image = event.target.files[0];
     setImageAsFile(image);
   };
-  console.log(process.env);
+  console.log(process);
 
   const handleFireBaseUpload = (event) => {
     event.preventDefault();
