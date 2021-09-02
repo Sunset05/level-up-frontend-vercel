@@ -7,6 +7,7 @@ export default function DirectMessages({
   addNewMessage,
   chattingWithId,
 }) {
+  const messagesUrl = "https://level-up-heroku-backend.herokuapp.com/messages";
   const [chatMessage, setChatMessage] = useState("");
 
   const chattingWithReceivedMessages = receivedMessages.filter(
@@ -47,7 +48,7 @@ export default function DirectMessages({
       message_body: chatMessage,
       has_been_read: false,
     };
-    fetch("http://localhost:9000/messages", {
+    fetch(messagesUrl, {
       method: "POST",
       headers: {
         Authorization: `Bearer ${localStorage.token}`,

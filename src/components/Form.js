@@ -3,6 +3,7 @@ import { storage } from "../firebase/firebase";
 import { useHistory } from "react-router-dom";
 
 export default function Form(props) {
+  const listingsUrl = "https://level-up-heroku-backend.herokuapp.com/listings";
   const [item, setItem] = useState("");
   const [price, setPrice] = useState(0);
   const [description, setDescription] = useState("");
@@ -42,7 +43,7 @@ export default function Form(props) {
             .getDownloadURL()
             .then((fireBaseUrl) => {
               setImageUrl(fireBaseUrl);
-              fetch("http://localhost:9000/listings", {
+              fetch(listingsUrl, {
                 method: "POST",
                 headers: {
                   Authorization: `Bearer ${localStorage.token}`,
