@@ -12,7 +12,8 @@ export default function SignUpForm(props) {
     const { removeUserFromState } = props;
     localStorage.removeItem("token");
     removeUserFromState();
-  });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handleSubmit = (event) => {
     event.preventDefault();
